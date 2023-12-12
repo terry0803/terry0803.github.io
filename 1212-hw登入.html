@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登入頁面</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>登入</h1>
+        <form name="loginForm" onsubmit="return authenticate()">
+            <label for="username">用戶名：</label>
+            <input type="text" name="username" id="username" placeholder="輸入員工姓名" required><br><br>
+            <label for="password">密碼：</label>
+            <input type="password" name="password" id="password" placeholder="輸入電話號碼" required>
+            <label for="showPassword">
+                <input type="checkbox" id="showPassword" onchange="togglePasswordVisibility()">
+                顯示密碼
+            </label><br><br>
+            <input type="submit" value="登入">
+        </form>
+        <p>還沒有帳號？ <a href="1212-hw註冊.html">註冊</a></p>
+        <p>忘記密碼？ <a href="1212-hw找回密碼.html">找回密碼</a></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
