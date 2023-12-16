@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-Tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>產品選擇</title>
+    <link rel="stylesheet" href="D:\網頁程式設計 06503\範例檔案\範例檔案\星輝網購物車\css\style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>選擇您的產品</h1>
+        </header>
+        
+        <section class="product-options">
+            <h2>選擇產品</h2>
+            <select id="productOption" onchange="updatePriceDisplay()">
+                <optgroup label="銀河平板系列">
+                    <option value="galaxy-tab-x1">銀河平板X1</option>
+                    <option value="galaxy-tab-x1-plus">銀河平板X1 Plus</option>
+                    <option value="galaxy-tab-x1-ultra">銀河平板X1 Ultra</option>
+                </optgroup>
+                
+                <optgroup label="配件">
+                    <option value="charging-cable">銀河快衝線</option>
+                    <option value="charging-head">銀河快衝頭</option>
+                    <option value="adapter-cable">網星輝轉接線</option>
+                </optgroup>
+
+                <optgroup label="星際遊俠系列">
+                    <option value="interstellar-ranger-r1">星際遊俠R1</option>
+                    <option value="interstellar-ranger-r1-plus">星際遊俠R1 Plus</option>
+                    <option value="interstellar-ranger-r1-pro">星際遊俠R1 Pro</option>
+                    <option value="interstellar-ranger-r1-pro-fe">星際遊俠R1 Pro FE</option>
+                </optgroup>
+
+                <optgroup label="星際手錶系列">
+                    <option value="interstellar-watch-mini">星際手錶 Mini</option>
+                    <option value="interstellar-watch-pro">星際手錶 Pro</option>
+                    <option value="interstellar-watch-fe">星際手錶 FE</option>
+                </optgroup>
+
+                <optgroup label="家庭">
+                    <option value="stellar-tv">星輝TV</option>
+                    <option value="stellar-pod">星輝Pod</option>
+                    <option value="stellar-pod-mini">星輝Pod mini</option>
+                </optgroup>
+
+                <optgroup label="娛樂">
+                    <option value="star-game">Star GAME</option>
+                    <option value="star-one">Star ONE</option>
+                    <option value="star-tv-plus">Star TV+</option>
+                    <option value="star-music">Star Music</option>
+                    <option value="star-podcast">Star Podcast</option>
+                    <option value="star-book">Star Book</option>
+                    <option value="star-store">Star Store</option>
+                </optgroup>
+            </select>
+            <div id="priceDisplay"></div>
+            <button class="buy-now" onclick="addToCart()">加入購物車</button>
+        </section>
+
+        <!-- 購物車 -->
+        <section class="shopping-cart">
+            <h2>購物車</h2>
+            <ul id="cart-items">
+                <!-- 購物車內容將在這裡動態生成 -->
+            </ul>
+            <p id="total">總計: NT$0.00</p>
+            <button id="checkout-button" onclick="checkout()">結帳</button>
+        </section>
+    </div>
+
+    <script src="css/script.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

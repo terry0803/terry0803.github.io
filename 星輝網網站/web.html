@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
     <style>
         .title-section h2 {
             text-align: center;
@@ -22,12 +23,18 @@
     </style>
 </head>
 <body>
-<header>
-    <nav>
+    <button onclick="topFunction()" id="myTop" title="top">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+    
+    <script src="D:\網頁程式設計 06503\範例檔案\範例檔案\星輝網網站\js\topbutton.js"></script>
+    <nav id="myTopnav">
+        <!-- <button onclick="topFunction()" id="myBtn" title="回到頂部"><i class="fa fa-arrow-up"></i></button> -->
         <a href="D:\網頁程式設計 06503\範例檔案\範例檔案\星輝網產品\Product.html"><i class="fa-solid fa-shop "></i> 店鋪 </a>
         <a href="D:\網頁程式設計 06503\範例檔案\範例檔案\星輝網部落格\Blog.html"><i class="fa-solid fa-tablet "></i> 商品 </a>
         <a href="D:\網頁程式設計 06503\範例檔案\範例檔案\星輝網網站\img\作業流程.png"><i class="fa-solid fa-laptop "></i> 作業流程 </a>
-        <a href="D:\網頁程式設計 06503\範例檔案\範例檔案\星輝網網站\img\架構圖.png"><i class="fa-solid fa-comments "></i> 公司架構圖 </a>               
+        <a href="D:\網頁程式設計 06503\範例檔案\範例檔案\星輝網網站\img\架構圖.png"><i class="fa-solid fa-comments "></i> 公司架構圖 </a>        
+               
         <form>
             <div class="input-wrapper">
                 <input type="search" id="search" name="search" placeholder="搜尋..">
@@ -35,8 +42,38 @@
             </div>       
          </form>
     </nav>
+	<header class="slideshow-container">
+		<div class="mySlideshows fade">
+            <img src="css/bg011.jpg" style="width:100%">
+        </div>
+            <div class="mySlideshows fade">
+            <img src="css/bg01.jpg" style="width:100%">
+        </div>
+        <div class="mySlideshows fade">
+            <img src="css/bg02.jpg" style="width:100%">
+        </div>
+        <div class="mySlideshows fade">
+            <img src="css/bg01.jpg" style="width:100%">
+        </div>
+            <div class="mySlideshows fade">
+            <img src="css/bg011.jpg" style="width:100%">
+        </div>
+        </div>
+            <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+            <a class="next" onclick="moveSlide(1)">&#10095;</a>
+        </div>
+        <div style="text-align:center">
+		    <span class="dot" onclick="currentSlide(1)"></span>
+		    <span class="dot" onclick="currentSlide(2)"></span>
+		    <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+		    <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+    </header>
+
+
     <h1>StellarWeb Market</h1>
-    <img class="logo" src="img/logo.png" alt="logo">
+    <!-- <img class="logo" src="img/logo.png" alt="logo"> -->
 </header>
 
 <div class="title-section">
@@ -68,7 +105,7 @@
         <h2>銀河平板X1</h2>
         <p>星輝網銀河平板X1擁有10.1英寸清晰顯示屏，十二核處理器，適合日常辦公和娛樂需求，結合長效電池和時尚設計，是工作和休閒的理想選擇。</p>
         <h3>$5999</h3>
-        <h5><a class="button" href="D:\網頁程式設計 06503\範例檔案\範例檔案\星輝往購物車\buy.html">立即購買</a></h5>
+        <h5><a class="button" href="D:\網頁程式設計 06503\範例檔案\範例檔案\星輝網購物車\buy.html">立即購買</a></h5>
     </div>
     <div class="column side">
         <img src="img/pic04.JPG" width="100%">
@@ -85,7 +122,7 @@
         <h2>星際遊侠R1</h2>
         <p>星際遊侠R1配備二十四核處理器和流暢顯示，適合多任務處理和高清視頻播放，其獨特散熱系統保持持久性能，是個人和電競的理想選擇。</p>
         <h3>$15999</h3>
-        <h5><a class="button" href="D:\網頁程式設計 06503\範例檔案\範例檔案\星輝往購物車\buy.html">立即購買</a></h5>
+        <h5><a class="button" href="D:\網頁程式設計 06503\範例檔案\範例檔案\星輝網購物車\buy.html">立即購買</a></h5>
     </div>
 </section>
 <section>
@@ -119,5 +156,9 @@
     <a href="#"><i class="fa-brands fa-instagram-square fa-fw fa-2x"></i>Instagram</a>
     <h6>Copyright © 星輝網 </h6>
 </footer>
+
+<script src="D:\網頁程式設計 06503\範例檔案\範例檔案\星輝網網站\js\Slide.js"></script>
+
+
 </body>
 </html>
