@@ -19,7 +19,7 @@ function authenticate() {
             // 登入成功，顯示訊息
             showSuccessMessage('登入成功！');
             // 導向到成功頁面
-            window.location.href = 'file:///D:/網頁程式設計 06503/範例檔案/範例檔案/星輝網網站/web.html';
+            window.location.href = 'https://terry0803.github.io/%E6%98%9F%E8%BC%9D%E7%B6%B2%E7%B6%B2%E7%AB%99/web.html';
             break;
         }
     }
