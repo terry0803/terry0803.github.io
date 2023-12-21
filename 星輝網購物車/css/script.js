@@ -26,7 +26,7 @@ function addToCart() {
     }
     
     // 显示警示框
-    alert(productName + ' 已加入购物车！');
+    alert(productName + ' 已加入購物車！');
     
     // 更新购物车内容
     updateCart();
@@ -63,7 +63,7 @@ function getPrice(productId) {
         'star-store': '799'
     };
 
-    return prices[productId] || '产品价格未设置';
+    return prices[productId] || '產品價格未設置';
 }
 
 // 函数：更新购物车内容
@@ -83,12 +83,12 @@ function updateCart() {
             NT$${item.price.toFixed(2)} x 
             <input type="number" value="${item.quantity}" min="1" onchange="updateQuantity(${index}, this.value)">
             = NT$${itemTotalPrice.toFixed(2)}
-            <button onclick="removeFromCart(${index})">删除</button>
+            <button onclick="removeFromCart(${index})">刪除</button>
         `;
         cartItems.appendChild(li);
     });
 
-    total.textContent = `总计: NT$${totalPrice.toFixed(2)}`;
+    total.textContent = `總計: NT$${totalPrice.toFixed(2)}`;
 }
 
 // 函数：更新商品数量
@@ -106,7 +106,7 @@ function removeFromCart(index) {
 // 函数：处理结账
 function checkout() {
     // 在此处处理结账逻辑，例如跳转到支付页面
-    alert("感谢您的购买！");
+    alert("感謝您的購買！");
 }
 
 function updatePriceDisplay() {
@@ -115,7 +115,7 @@ function updatePriceDisplay() {
     const productPrice = getPrice(selectedProduct);
 
     const priceDisplay = document.getElementById('priceDisplay');
-    priceDisplay.textContent = `价格: NT$${productPrice}`;
+    priceDisplay.textContent = `價格: NT$${productPrice}`;
 }
 
 // 函数：将购物车数据保存为 JSON 文件
@@ -139,7 +139,7 @@ function saveCartAsFile() {
 function loadCartFromFile() {
     const fileInput = document.getElementById('fileInput');
     if (fileInput.files.length === 0) {
-        alert('请选择一个文件！');
+        alert('請選擇一個文件！');
         return;
     }
 
@@ -151,9 +151,9 @@ function loadCartFromFile() {
             const cartData = JSON.parse(event.target.result);
             shoppingCart = cartData;
             updateCart();
-            alert('购物车数据已加载！');
+            alert('購物車數據已加載！');
         } catch (error) {
-            alert('文件解析错误！');
+            alert('文件解析錯誤！');
         }
     };
 
@@ -163,13 +163,6 @@ function loadCartFromFile() {
 // 页面加载时初始化
 window.onload = function() {
     loadCart();
-
-    // 添加保存按钮
-    const saveButton = document.createElement('button');
-    saveButton.textContent = '保存购物车';
-    saveButton.onclick = saveCartAsFile;
-    document.body.appendChild(saveButton);
-
     // 添加加载文件按钮的事件监听器
     const loadFileButton = document.getElementById('loadFileButton');
     loadFileButton.onclick = loadCartFromFile;

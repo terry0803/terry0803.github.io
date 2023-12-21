@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-Tw">
 <head>
-    <input type="file" id="fileInput" accept=".json">
 
-<!-- 加载文件内容的按钮 -->
-<button id="loadFileButton">加载购物车数据</button>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>產品選擇</title>
@@ -15,7 +12,11 @@
         <header>
             <h1>選擇您的產品</h1>
         </header>
-        
+            <!-- 選擇檔案按鈕 -->
+    <input type="file" id="fileInput" class="custom-file-input">
+    <!-- 加載購物車數據按鈕 -->
+    <button id="loadFileButton" class="custom-button">加載購物車數據</button>
+
         <section class="product-options">
             <h2>選擇產品</h2>
             <select id="productOption" onchange="updatePriceDisplay()">
@@ -74,24 +75,12 @@
             <button id="checkout-button" onclick="checkout()">結帳</button>
         </section>
 
+    <!-- 保存購物車按鈕 -->
+    <button onclick="saveCartAsFile()" class="custom-button">保存購物車</button>
 
-        
-        
     </div>
 
     <script src="css\script.js"></script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
