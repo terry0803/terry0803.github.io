@@ -36,3 +36,9 @@ function moveSlide(n) {
   slideIndex += n - 1;
   showSlides();
 }
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+
