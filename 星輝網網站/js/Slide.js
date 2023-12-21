@@ -1,6 +1,8 @@
 let slideIndex = 0;
 showSlides();  // 啟動自動輪播
 
+var slideTimeout;
+
 function showSlides() {
   let i;
   let slides = document.getElementsByClassName('mySlideshows');
@@ -25,7 +27,8 @@ function showSlides() {
   dots[slideIndex-1].className += ' active';
 
   // 設置自動切換幻燈片的時間間隔
-  setTimeout(showSlides, 3000); // 3秒後自動切換到下一張幻燈片
+  clearTimeout(slideTimeout);
+  slideTimeout = setTimeout(showSlides, 2000); // 2秒後切換幻燈片
 }
 
 // 手動切換幻燈片

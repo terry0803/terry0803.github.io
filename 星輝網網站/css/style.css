@@ -20,7 +20,7 @@ a {
 .slideshow-container {
   padding-bottom: 30px;
   max-width: 100%; /* 調整為所需的寬度 */
-  height: 700px; /* 調整為所需的高度 */
+  height: 900px; /* 調整為所需的高度 */
   position: relative;
   margin: 0 auto;
   overflow: hidden; /* 隱藏超出容器的部分 */
@@ -60,7 +60,7 @@ a {
 /*圖片說明文字*/
 .text {
   color: #f2f2f2;
-  font-size: 1.5rem;
+  font-size: 2.3rem;
   padding: 50px 12px;
   position: absolute;
   bottom: 8px;
