@@ -1,5 +1,5 @@
 // 定义购物车数组
-let shoppingCart = [];
+let shoppingCart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
 
 // 函数：将产品添加到购物车
 function addToCart() {
@@ -7,6 +7,7 @@ function addToCart() {
     const selectedProduct = productOption.value;
     const productName = productOption.options[productOption.selectedIndex].text;
     const productPrice = getPrice(selectedProduct);
+
 
     // 检查购物车中是否已经有这个产品
     const existingItem = shoppingCart.find(item => item.id === selectedProduct);
@@ -89,6 +90,9 @@ function updateCart() {
     });
 
     total.textContent = `總計: NT$${totalPrice.toFixed(2)}`;
+
+         // 更新 localStorage 中的購物車數據
+         localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
 }
 
 // 函数：更新商品数量
@@ -105,9 +109,16 @@ function removeFromCart(index) {
 
 // 函数：处理结账
 function checkout() {
-    // 在此处处理结账逻辑，例如跳转到支付页面
-    alert("感謝您的購買！");
+    if (shoppingCart.length === 0) {
+        alert("購物車無商品");
+    } else {
+        // 處理結帳並清空購物車
+        alert("感謝您的購買！");
+        shoppingCart = []; // 清空購物車
+        updateCart(); // 更新購物車顯示
+    }
 }
+
 
 function updatePriceDisplay() {
     const productOption = document.getElementById('productOption');
